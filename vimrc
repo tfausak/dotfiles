@@ -1,9 +1,13 @@
 set nocompatible
 set bs=2
 set encoding=utf-8
-set nonumber
+set laststatus=2
+set modelines=0
+set relativenumber
 set ruler
 set scrolloff=4
+set showcmd
+set showmode
 
 " Searching
 set hlsearch
@@ -29,10 +33,12 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 
-" Back up and temporary files
+" Back up, temporary, and undo files
 set backup
 set backupdir=~/.vim/backup//
 set directory=~/.vim/tmp//
+set undodir=~/.vim/undo//
+set undofile
 
 " Invisible characters
 set list
