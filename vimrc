@@ -3,8 +3,8 @@ set bs=2
 set encoding=utf-8
 set laststatus=2
 set modelines=0
-set numberwidth=2
-set relativenumber
+set nonumber
+set norelativenumber
 set ruler
 set scrolloff=4
 set showcmd
