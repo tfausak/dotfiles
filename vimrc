@@ -3,6 +3,7 @@ set bs=2
 set encoding=utf-8
 set laststatus=2
 set modelines=0
+set nojoinspaces
 set nonumber
 set norelativenumber
 set ruler
