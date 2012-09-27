@@ -48,8 +48,10 @@ set listchars=tab:>>,trail:-
 highlight SpecialKey cterm=NONE ctermfg=red
 
 " Remove trailing whitespace on save
-autocmd BufWritePre *.{au3,css,html,js,json,py} :%s/\s\+$//e
 autocmd BufWritePre *.{au3,css,html,js,json,pl,py,rb} :%s/\s\+$//e
 
 " Use two spaces to indent Ruby
 autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
+
+" Force Markdown filetype instead of Modula-2
+autocmd FileType modula2 setlocal filetype=markdown
