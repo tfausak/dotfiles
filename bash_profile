@@ -19,3 +19,6 @@ alias lss='ls -AGhltr'
 export HISTCONTROL=ignoredups:erasedups
 export HISTFILESIZE=1024
 export HISTSIZE=1024
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/bin:/usr/local/mysql/bin:$PATH"
