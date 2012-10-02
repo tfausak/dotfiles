@@ -14,6 +14,7 @@ unset black red green yellow blue purple cyan white reset
 # Aliases
 alias ls='ls -G'
 alias lss='ls -AGhltr'
+alias be='bundle exec'
 
 # History
 export HISTCONTROL=ignoredups:erasedups
