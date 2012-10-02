@@ -31,9 +31,9 @@ set foldnestmax=20
 " Indentation
 set autoindent
 set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
 
 " Back up, temporary, and undo files
 set backup
@@ -48,10 +48,7 @@ set listchars=tab:>>,trail:-
 highlight SpecialKey cterm=NONE ctermfg=red
 
 " Remove trailing whitespace on save
-autocmd BufWritePre *.{au3,css,html,js,json,pl,py,rb} :%s/\s\+$//e
-
-" Use two spaces to indent Ruby
-autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2 tabstop=2
+autocmd BufWritePre *.{au3,css,erb,html,js,json,pl,py,rb} :%s/\s\+$//e
 
 " Force Markdown filetype instead of Modula-2
 autocmd FileType modula2 setlocal filetype=markdown
