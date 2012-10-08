@@ -15,6 +15,7 @@ unset black red green yellow blue purple cyan white reset
 alias ls='ls -G'
 alias lss='ls -AGhltr'
 alias be='bundle exec'
+alias :tabe='echo -ne "\007"; echo "Not in Vim!"; sleep 1; vi'
 
 # History
 export HISTCONTROL=ignoredups:erasedups
