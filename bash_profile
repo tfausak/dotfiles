@@ -9,8 +9,21 @@ COLOR_CYAN='\[\e[0;36m\]'
 COLOR_WHITE='\[\e[0;37m\]'
 COLOR_RESET='\[\e[0m\]'
 
+# Git
+function _git_branch () {
+  git branch 2> /dev/null | grep '^[*] ' | sed 's/^[*] //'
+}
+function _git_separator () {
+  if [ -z $(_git) ]
+  then
+    echo ''
+  else
+    echo '+'
+  fi
+}
+
 # Prompt
-export PS1="${COLOR_RED}\u${COLOR_WHITE}@${COLOR_GREEN}\h${COLOR_WHITE}:${COLOR_BLUE}\W${COLOR_WHITE}\$${COLOR_RESET} "
+export PS1="${COLOR_RED}\u${COLOR_WHITE}@${COLOR_GREEN}\h${COLOR_WHITE}:${COLOR_BLUE}\W${COLOR_WHITE}\$(_git_separator)${COLOR_YELLOW}\$(_git_branch)${COLOR_WHITE}\$${COLOR_RESET} "
 
 # Aliases
 alias ls='ls -G'
