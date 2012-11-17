@@ -12,11 +12,14 @@ The easiest way to keep everything in sync is with symbolic links.
 ```sh
 git clone git@github.com:tfausak/dotfiles.git
 cd dotfiles
-dotfiles=$( bash_profile gitconfig pylintrc vimrc )
+dir=$( pwd -P )
+cd ~
+dotfiles=$( bash_profile gitconfig vimrc )
 for dotfile in ${dotiles[@]}
 do
-    ln -s $dotfile ~/.$dotfile
+    ln -s "$dir"/"$dotfile" ~/."$dotfile"
 done
+cd -
 ```
 
 Vim requires some special directories for scratch files.
