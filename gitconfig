@@ -1,9 +1,12 @@
 [user]
     name = Taylor Fausak
     email = taylor@fausak.me
+
 [color]
     ui = auto
+
 [core]
     editor = vim
+
 [merge]
     tool = vimdiff

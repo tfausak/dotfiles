@@ -28,8 +28,6 @@ export PS1="${COLOR_RED}\u${COLOR_WHITE}@${COLOR_GREEN}\h${COLOR_WHITE}:${COLOR_
 # Aliases
 alias ls='ls -G'
 alias lss='ls -AGhltr'
-alias be='bundle exec'
-alias :tabe='echo -ne "\007"; echo "Not in Vim!"; sleep 1; vi'
 alias grep='grep --color=auto --no-messages'
 
 # History
