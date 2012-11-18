@@ -17,8 +17,10 @@ cd ~
 dotfiles=$( bash_profile gitconfig vimrc )
 for dotfile in ${dotiles[@]}
 do
-    ln -s "$dir"/"$dotfile" ~/."$dotfile"
+    ln -s "$dir/$dotfile" ".$dotfile"
 done
+ln -fs "$dir/Preferences.sublime-settings" \
+    "Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
 cd -
 ```
 
