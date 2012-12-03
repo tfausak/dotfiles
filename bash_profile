@@ -14,10 +14,8 @@ function _git_branch () {
     git branch 2>/dev/null | grep '^[*] ' | sed 's/^[*] //'
 }
 function _git_separator () {
-    if [ -z "$(_git_branch)" ]
+    if [ "$(_git_branch)" ]
     then
-        echo ''
-    else
         echo '+'
     fi
 }
