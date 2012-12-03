@@ -14,7 +14,7 @@ git clone git@github.com:tfausak/dotfiles.git
 cd dotfiles
 dir=$( pwd -P )
 cd ~
-dotfiles=$( aprc bash_profile gitconfig irbrc vimrc )
+dotfiles=$( aprc bash_profile gitconfig gitignore irbrc vimrc )
 for dotfile in ${dotiles[@]}
 do
     ln -s "$dir/$dotfile" ".$dotfile"
