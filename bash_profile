@@ -11,19 +11,30 @@ COLOR_RESET='\[\e[0m\]'
 
 # Git
 function _git_branch () {
-  git branch 2> /dev/null | grep '^[*] ' | sed 's/^[*] //'
+    git branch 2>/dev/null | grep '^[*] ' | sed 's/^[*] //'
 }
 function _git_separator () {
-  if [ -z "$(_git_branch)" ]
-  then
-    echo ''
-  else
-    echo '+'
-  fi
+    if [ -z "$(_git_branch)" ]
+    then
+        echo ''
+    else
+        echo '+'
+    fi
 }
 
 # Prompt
-export PS1="${COLOR_RED}\u${COLOR_WHITE}@${COLOR_GREEN}\h${COLOR_WHITE}:${COLOR_BLUE}\W${COLOR_WHITE}\$(_git_separator)${COLOR_YELLOW}\$(_git_branch)${COLOR_WHITE}\$${COLOR_RESET} "
+export PS1="\
+${COLOR_CYAN}\$(date +'%T')\
+${COLOR_WHITE}-\
+${COLOR_RED}\u\
+${COLOR_WHITE}@\
+${COLOR_GREEN}\h\
+${COLOR_WHITE}:\
+${COLOR_BLUE}\W\
+${COLOR_WHITE}\$(_git_separator)\
+${COLOR_YELLOW}\$(_git_branch)\
+${COLOR_WHITE}\$\
+${COLOR_RESET} "
 
 # Aliases
 alias ls='ls -G'
@@ -38,4 +49,5 @@ export HISTSIZE=1024
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH="$HOME/bin:/usr/local/mysql/bin:$PATH:/usr/local/sbin"
 
-unset COLOR_BLACK COLOR_RED COLOR_GREEN COLOR_YELLOW COLOR_BLUE COLOR_PURPLE COLOR_CYAN COLOR_WHITE COLOR_RESET
+unset COLOR_BLACK COLOR_RED COLOR_GREEN COLOR_YELLOW COLOR_BLUE COLOR_PURPLE \
+      COLOR_CYAN COLOR_WHITE COLOR_RESET
