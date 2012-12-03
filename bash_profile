@@ -24,7 +24,7 @@ function _git_separator () {
 
 # Prompt
 export PS1="\
-${COLOR_CYAN}\$(date +'%T')\
+${COLOR_CYAN}\t\
 ${COLOR_WHITE}-\
 ${COLOR_RED}\u\
 ${COLOR_WHITE}@\
