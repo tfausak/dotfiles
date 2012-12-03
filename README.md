@@ -14,12 +14,12 @@ git clone git@github.com:tfausak/dotfiles.git
 cd dotfiles
 dir=$( pwd -P )
 cd ~
-dotfiles=$( aprc bash_profile gitconfig gitignore irbrc vimrc )
-for dotfile in ${dotiles[@]}
+dotfiles=( aprc bash_profile gitconfig gitignore irbrc vimrc )
+for dotfile in ${dotfiles[@]}
 do
-    ln -s "$dir/$dotfile" ".$dotfile"
+    ln -fsv "$dir/$dotfile" ".$dotfile"
 done
-ln -fs "$dir/Preferences.sublime-settings" \
+ln -fsv "$dir/Preferences.sublime-settings" \
     "Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
 cd -
 ```
@@ -27,5 +27,5 @@ cd -
 Vim requires some special directories for scratch files.
 
 ```sh
-mkdir ~/.vim ~/.vim/backup ~/.vim/tmp ~/.vim/undo
+mkdir -pv ~/.vim/{backup,tmp,undo}
 ```
