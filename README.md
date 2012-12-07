@@ -21,6 +21,8 @@ do
 done
 ln -fsv "$dir/Preferences.sublime-settings" \
     "Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+ln -fsv "$dir/com.googlecode.iterm2.plist" \
+  "Library/Preferences/com.googlecode.iterm2.plist"
 cd -
 ```
 
