@@ -23,15 +23,15 @@ function _git_separator () {
 # Prompt
 export PS1="\
 ${COLOR_CYAN}\t\
-${COLOR_WHITE}-\
+${COLOR_BLACK}-\
 ${COLOR_RED}\u\
-${COLOR_WHITE}@\
+${COLOR_BLACK}@\
 ${COLOR_GREEN}\h\
-${COLOR_WHITE}:\
+${COLOR_BLACK}:\
 ${COLOR_BLUE}\W\
-${COLOR_WHITE}\$(_git_separator)\
+${COLOR_BLACK}\$(_git_separator)\
 ${COLOR_YELLOW}\$(_git_branch)\
-${COLOR_WHITE}\$\
+${COLOR_BLACK}\$\
 ${COLOR_RESET} "
 
 # Aliases
