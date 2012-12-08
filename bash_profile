@@ -45,7 +45,11 @@ export HISTFILESIZE=1024
 export HISTSIZE=1024
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH="$HOME/bin:/usr/local/mysql/bin:$PATH:/usr/local/sbin"
+export PATH="$PATH\
+:$HOME/bin\
+:/usr/local/heroku/bin\
+:/usr/local/mysql/bin\
+:/usr/local/sbin"
 
 unset COLOR_BLACK COLOR_RED COLOR_GREEN COLOR_YELLOW COLOR_BLUE COLOR_PURPLE \
       COLOR_CYAN COLOR_WHITE COLOR_RESET
