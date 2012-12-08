@@ -1,3 +1,5 @@
+git update-index --assume-unchanged com.googlecode.iterm2.plist
+
 dir=$( pwd -P )
 cd ~
 dotfiles=( aprc bash_profile gitconfig gitignore irbrc vimrc )
