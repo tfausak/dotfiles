@@ -41,8 +41,8 @@ alias grep='grep --color=auto --no-messages'
 
 # History
 export HISTCONTROL=ignoredups:erasedups
-export HISTFILESIZE=1024
-export HISTSIZE=1024
+export HISTFILESIZE=65536
+export HISTSIZE=65536
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 export PATH="$PATH\
