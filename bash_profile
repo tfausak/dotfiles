@@ -9,6 +9,9 @@ COLOR_CYAN='\[\e[0;36m\]'
 COLOR_WHITE='\[\e[0;37m\]'
 COLOR_RESET='\[\e[0m\]'
 
+export CLICOLOR=1
+export GREP_OPTIONS='--color=auto'
+
 # Git
 function _git_branch () {
     git branch 2>/dev/null | grep '^[*] ' | sed 's/^[*] //'
@@ -33,9 +36,7 @@ ${COLOR_BLACK}\$\
 ${COLOR_RESET} "
 
 # Aliases
-alias ls='ls -G'
 alias lss='ls -AGhltr'
-alias grep='grep --color=auto --no-messages'
 
 # History
 export HISTCONTROL=ignoredups:erasedups
