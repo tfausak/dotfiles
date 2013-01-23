@@ -42,12 +42,14 @@ export HISTCONTROL=ignoredups:erasedups
 export HISTFILESIZE=65536
 export HISTSIZE=65536
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-export PATH="$PATH\
-:$HOME/bin\
-:/usr/local/heroku/bin\
-:/usr/local/mysql/bin\
-:/usr/local/sbin"
+# Path
+export PATH="$HOME/bin:$PATH:/usr/local/sbin"
+
+# REE
+export RUBY_GC_MALLOC_LIMIT=50000000
+export RUBY_HEAP_MIN_SLOTS=500000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_HEAP_SLOTS_INCREMENT=250000
 
 unset COLOR_BLACK COLOR_RED COLOR_GREEN COLOR_YELLOW COLOR_BLUE COLOR_PURPLE \
       COLOR_CYAN COLOR_WHITE COLOR_RESET
