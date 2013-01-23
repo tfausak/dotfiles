@@ -22,8 +22,6 @@ function _git_separator () {
 
 # Prompt
 export PS1="\
-${COLOR_CYAN}\t\
-${COLOR_BLACK}-\
 ${COLOR_RED}\u\
 ${COLOR_BLACK}@\
 ${COLOR_GREEN}\h\
