@@ -54,8 +54,8 @@ export PATH="/usr/local/bin:$PATH"  # Homebrew
 export PATH="/usr/local/sbin:$PATH" # nginx
 
 # rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export RBENV_ROOT=/usr/local/opt/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # nvm
 [[ -s /Users/t/.nvm/nvm.sh ]] && . /Users/t/.nvm/nvm.sh
