@@ -50,8 +50,9 @@ export HISTSIZE=65536
 
 # Path
 export PATH="$HOME/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"  # Homebrew
-export PATH="/usr/local/sbin:$PATH" # nginx
+export PATH="/usr/local/bin:$PATH"        # Homebrew
+export PATH="/usr/local/sbin:$PATH"       # nginx
+export PATH="/usr/local/heroku/bin:$PATH" # Heroku
 
 # rbenv
 export RBENV_ROOT=/usr/local/opt/rbenv
