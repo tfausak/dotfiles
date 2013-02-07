@@ -17,3 +17,6 @@
 
 [push]
     default = simple
+
+[alias]
+    b = blame -w -M -C -C -C
