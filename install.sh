@@ -1,6 +1,6 @@
 dir=$( pwd -P )
 cd ~
-dotfiles=( aprc bash_profile gemrc gitconfig gitignore vimrc )
+dotfiles=( aprc bash_profile gemrc gitconfig gitignore jshintrc vimrc )
 for dotfile in ${dotfiles[@]}
 do
     ln -fsv "$dir/$dotfile" ".$dotfile"
