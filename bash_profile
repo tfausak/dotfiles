@@ -48,15 +48,15 @@ export HISTCONTROL=ignoredups:erasedups
 export HISTFILESIZE=65536
 export HISTSIZE=65536
 
-# Path
-export PATH="$HOME/bin:$PATH"
-export PATH="/usr/local/bin:$PATH"        # Homebrew
-export PATH="/usr/local/sbin:$PATH"       # nginx
-export PATH="/usr/local/heroku/bin:$PATH" # Heroku
-
 # rbenv
 export RBENV_ROOT=/usr/local/opt/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Path
+export PATH="/usr/local/sbin:$PATH"       # nginx
+export PATH="/usr/local/heroku/bin:$PATH" # Heroku
+export PATH="/usr/local/bin:$PATH"        # Homebrew
+export PATH="$HOME/bin:$PATH"
 
 # nvm
 [[ -s /Users/t/.nvm/nvm.sh ]] && . /Users/t/.nvm/nvm.sh
