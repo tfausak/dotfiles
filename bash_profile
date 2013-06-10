@@ -40,9 +40,6 @@ ${COLOR_RESET} "
 unset COLOR_BLACK COLOR_RED COLOR_GREEN COLOR_YELLOW COLOR_BLUE COLOR_PURPLE \
       COLOR_CYAN COLOR_WHITE COLOR_RESET
 
-# Aliases
-alias lss='ls -AGhltr'
-
 # History
 export HISTCONTROL=ignoredups:erasedups
 export HISTFILESIZE=65536
