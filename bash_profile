@@ -1,44 +1,36 @@
+# Prompt
+function _branch {
+    git symbolic-ref --quiet --short HEAD 2>/dev/null
+}
+function _git {
+    test "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = 'true'
+}
+function _prompt {
+    local reset='\[\e[0m\]'
+    local black='\[\e[0;30m\]'
+    local yellow='\[\e[0;33m\]'
+    local blue='\[\e[0;34m\]'
+    local purple='\[\e[0;35m\]'
+    local cyan='\[\e[0;36m\]'
+
+    echo "\
+${yellow}\u\
+${black}@\
+${cyan}\h\
+${black}:\
+${blue}\W\
+${black}\$(_git && echo +)\
+${purple}\$(_branch)\
+${black}\$\
+${reset} "
+}
+export PS1=$(_prompt)
+
 # Colorize `ls`.
 export CLICOLOR=1
 
 # Colorize `grep`.
 export GREP_OPTIONS='--color=auto'
-
-# Git
-function _git_branch () {
-    git branch 2>/dev/null | grep '^[*] ' | sed 's/^[*] //'
-}
-function _git_separator () {
-    if [ "$(_git_branch)" ]
-    then
-        echo '+'
-    fi
-}
-
-# Prompt
-COLOR_BLACK='\[\e[0;30m\]'
-COLOR_RED='\[\e[0;31m\]'
-COLOR_GREEN='\[\e[0;32m\]'
-COLOR_YELLOW='\[\e[0;33m\]'
-COLOR_BLUE='\[\e[0;34m\]'
-COLOR_PURPLE='\[\e[0;35m\]'
-COLOR_CYAN='\[\e[0;36m\]'
-COLOR_WHITE='\[\e[0;37m\]'
-COLOR_RESET='\[\e[0m\]'
-
-export PS1="\
-${COLOR_RED}\u\
-${COLOR_BLACK}@\
-${COLOR_GREEN}\h\
-${COLOR_BLACK}:\
-${COLOR_BLUE}\W\
-${COLOR_BLACK}\$(_git_separator)\
-${COLOR_YELLOW}\$(_git_branch)\
-${COLOR_BLACK}\$\
-${COLOR_RESET} "
-
-unset COLOR_BLACK COLOR_RED COLOR_GREEN COLOR_YELLOW COLOR_BLUE COLOR_PURPLE \
-      COLOR_CYAN COLOR_WHITE COLOR_RESET
 
 # History
 export HISTCONTROL=ignoredups:erasedups
