@@ -1,4 +1,5 @@
 set nocompatible
+
 set bs=2
 set encoding=utf-8
 set laststatus=2
@@ -19,7 +20,8 @@ set smartcase
 
 " Syntax highlighting
 syntax enable
-colorscheme default
+set background=dark
+colorscheme solarized
 
 " Code folding
 set foldenable
