@@ -52,3 +52,6 @@ export PATH="$HOME/bin:$PATH"
 
 # Go
 export GOPATH="$HOME/bin/go"
+
+# For rbenv through Homebrew.
+export RBENV_ROOT=/usr/local/var/rbenv
