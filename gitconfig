@@ -1,7 +1,3 @@
-[user]
-    name = Taylor Fausak
-    email = taylor@fausak.me
-
 [color]
     ui = auto
 
@@ -9,11 +5,12 @@
     editor = vim
     excludesfile = ~/.gitignore
 
-[merge]
-    tool = vimdiff
-
 [credential]
     helper = osxkeychain
 
 [push]
     default = simple
+
+[user]
+    email = taylor@fausak.me
+    name = Taylor Fausak
