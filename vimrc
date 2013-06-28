@@ -21,7 +21,7 @@ set smartcase
 " Syntax highlighting
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme default
 
 " Code folding
 set foldenable
