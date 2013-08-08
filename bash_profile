@@ -1,31 +1,7 @@
-# Prompt
-function _branch {
-  git symbolic-ref --quiet --short HEAD 2>&-
-}
-function _git {
-  test "$(git rev-parse --is-inside-work-tree 2>&-)" = 'true'
-}
-function _prompt {
-  local reset='\[\e[0m\]'
-  local black='\[\e[0;30m\]'
-  local green='\[\e[0;32m\]'
-  local yellow='\[\e[0;33m\]'
-  local blue='\[\e[0;34m\]'
-  local purple='\[\e[0;35m\]'
-  local cyan='\[\e[0;36m\]'
-
-  echo "\
-${yellow}\u\
-${black}@\
-${cyan}\h\
-${black}:\
-${blue}\W\
-${black}\$(_git && echo +)\
-${purple}\$(_branch)\
-${green}\$\
-${reset} "
-}
-export PS1="$(_prompt)"
+export PS1="\
+\[\e[0;34m\]\W\
+\[\e[0;3\$(if test \$? = 0; then echo 2; else echo 1; fi)m\]\$\
+\[\e[0m\] "
 
 # Colorize `ls`.
 export CLICOLOR=1
@@ -34,7 +10,7 @@ export CLICOLOR=1
 export GREP_OPTIONS='--color=auto'
 
 # History
-export HISTCONTROL=ignoredups:erasedups
+export HISTCONTROL=erasedups:ignoredups
 export HISTFILESIZE=65536
 export HISTSIZE=65536
 
