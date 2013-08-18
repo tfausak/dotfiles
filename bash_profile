@@ -17,6 +17,7 @@ export HISTSIZE=65536
 # Path
 export PATH="/usr/local/sbin:$PATH" # nginx
 export PATH="/usr/local/bin:$PATH" # Homebrew
+export PATH="$HOME/.cabal/bin:$PATH" # Cabal (Haskell)
 export PATH="$HOME/bin:$PATH"
 
 # nvm
