@@ -18,14 +18,11 @@ export HISTSIZE=65536
 export PATH="/usr/local/sbin:$PATH" # nginx
 export PATH="/usr/local/bin:$PATH" # Homebrew
 export PATH="$HOME/.cabal/bin:$PATH" # Cabal (Haskell)
-export PATH="$HOME/bin:$PATH"
 
 # nvm
 test -s "$HOME/.nvm/nvm.sh" && source "$HOME/.nvm/nvm.sh"
 
-# Go
-export GOPATH="$HOME/bin/go"
-
-# For rbenv through Homebrew.
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby-2.0.0-p247
