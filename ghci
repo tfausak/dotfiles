@@ -1,2 +1,5 @@
 -- Lambda!
 :set prompt "\955 "
+
+-- :edit things with Vim.
+:set editor vim
