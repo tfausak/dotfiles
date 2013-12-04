@@ -1,26 +1,22 @@
 {
     "always_show_minimap_viewport": true,
     "auto_complete_commit_on_tab": true,
-    "color_scheme": "Packages/Base16 Color Schemes/base16-eighties.dark.tmTheme",
     "ensure_newline_at_eof_on_save": true,
-    "font_face": "Source Code Pro",
-    "font_size": 14,
+    "font_face": "Menlo",
+    "font_size": 12,
     "highlight_line": true,
     "highlight_modified_tabs": true,
     "ignored_packages": [
         "Vintage"
     ],
     "indent_guide_options": [
-        "draw_active",
-        "draw_normal"
+        "draw_active"
     ],
     "rulers": [
-        79.5,
         80
     ],
     "scroll_past_end": true,
-    "show_full_path": true,
-    "theme": "Centurion.sublime-theme",
+    "tab_size": 2,
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true
 }
