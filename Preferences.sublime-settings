@@ -1,14 +1,13 @@
 {
     "always_show_minimap_viewport": true,
+    "auto_close_tags": false,
     "auto_complete_commit_on_tab": true,
+    "auto_complete_with_fields": true,
     "ensure_newline_at_eof_on_save": true,
-    "font_face": "Menlo",
-    "font_size": 12,
+    "font_face": "Source Code Pro",
+    "font_size": 10,
     "highlight_line": true,
     "highlight_modified_tabs": true,
-    "ignored_packages": [
-        "Vintage"
-    ],
     "indent_guide_options": [
         "draw_active"
     ],
@@ -16,7 +15,8 @@
         80
     ],
     "scroll_past_end": true,
-    "tab_size": 2,
+    "show_encoding": true,
+    "show_line_endings": true,
     "translate_tabs_to_spaces": true,
     "trim_trailing_white_space_on_save": true
 }

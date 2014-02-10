@@ -49,11 +49,5 @@ set list
 set listchars=tab:>>,trail:-
 highlight SpecialKey cterm=NONE ctermfg=red
 
-" Remove trailing whitespace on save
-autocmd BufWritePre *.{au3,css,erb,html,js,json,pl,py,rb} :%s/\s\+$//e
-
-" Force Markdown filetype instead of Modula-2
-autocmd FileType modula2 setlocal filetype=markdown
-
 " Wrap Git commit messages to 72 characters
 autocmd FileType gitcommit set textwidth=72

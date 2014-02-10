@@ -4,9 +4,6 @@
 [core]
     editor = vim
 
-[credential]
-    helper = osxkeychain
-
 [push]
     default = simple
 
