@@ -23,19 +23,12 @@ syntax enable
 set background=dark
 colorscheme default
 
-" Code folding
-set foldenable
-set foldlevel=1
-set foldlevelstart=99
-set foldmethod=indent
-set foldnestmax=20
-
 " Indentation
 set autoindent
 set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 
 " Back up, temporary, and undo files
 set backup

@@ -1,12 +1,12 @@
 [color]
-    ui = auto
+  ui = auto
 
 [core]
-    editor = vim
+  editor = vim
 
 [push]
-    default = simple
+  default = simple
 
 [user]
-    email = taylor@fausak.me
-    name = Taylor Fausak
+  email = taylor@fausak.me
+  name = Taylor Fausak
